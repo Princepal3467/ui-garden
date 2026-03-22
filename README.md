@@ -68,3 +68,72 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+for checking node-v
+
+for creating the react app
+
+npm create react-app ui-garden
+cd ui-garden
+
+code .
+
+for intall stroybook
+npx storybook@latest init
+
+for run storybook
+npm run stroybook
+
+for building docker
+docker build -t ui-garden .
+
+for docker run
+docker run -p 8083:8083 ui-garden
+
+
+
+
+NEW--
+# UI Component Library (React + Storybook)
+
+##  Project Description
+This project is a React-based UI Component Library built using Storybook.
+It includes reusable components like Button, Table, Dropdown, etc.
+
+---
+
+##  How to Run (Docker)
+
+### Step 1: Build Image
+docker build -t ui-garden .
+
+### Step 2: Run Container
+docker run -p 8083:8083 ui-garden
+
+### Step 3: Open in Browser
+http://localhost:8083
+
+---
+
+##  Technologies Used
+- React
+- Storybook
+- Docker
+
+---
+
+##  Components Included
+- Button
+- Label
+- Text
+- Table
+- Dropdown
+- Radio Button
+- Image
+
+---
+
+##  How it Works
+Storybook runs on port 8083 and displays all UI components individually for testing and development.
