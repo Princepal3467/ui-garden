@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install
+        run: npm install
+
+      - name: Prettier Check
+        run: npx prettier --check .
+
+      - name: ESLint Check
+        run: npx eslint src --ext .js,.jsx
+
+      - name: Run Tests
+        run: npm test -- --watchAll=false

@@ -1,18 +1,16 @@
 FROM node:18-alpine
 
-WORKDIR /app
+WORKDIR /princepal_ui_garden_build_checks
 
-# Copy package files first
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy rest of project
 COPY . .
 
-# Expose Storybook port
-EXPOSE 8083
+RUN npm run build
 
-# Start Storybook correctly
-CMD ["npm", "run", "storybook"]
+RUN npm install -g serve
+
+EXPOSE 8018
+
+CMD ["serve", "-s", "build", "-l", "8018"]

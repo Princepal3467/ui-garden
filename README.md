@@ -69,8 +69,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
-
 for checking node-v
 
 for creating the react app
@@ -92,48 +90,74 @@ docker build -t ui-garden .
 for docker run
 docker run -p 8083:8083 ui-garden
 
-
-
-
 NEW--
-# UI Component Library (React + Storybook)
 
-##  Project Description
-This project is a React-based UI Component Library built using Storybook.
-It includes reusable components like Button, Table, Dropdown, etc.
+# UI Component Library - Assignment 13
 
----
+## Description
 
-##  How to Run (Docker)
-
-### Step 1: Build Image
-docker build -t ui-garden .
-
-### Step 2: Run Container
-docker run -p 8083:8083 ui-garden
-
-### Step 3: Open in Browser
-http://localhost:8083
+This project is a React UI Component Library using Storybook with code quality enforcement using Husky and CI/CD using GitHub Actions.
 
 ---
 
-##  Technologies Used
+## Features
+
+- React Component Library
+- Storybook UI
+- Husky Pre-commit Hooks
+- Prettier + ESLint + Tests enforcement
+- GitHub Actions CI/CD pipeline
+- Docker Production Build
+
+---
+
+## Husky (Pre-commit)
+
+Husky ensures:
+
+- Code is formatted using Prettier
+- ESLint checks pass
+- Tests pass
+
+If any fail → commit is blocked
+
+---
+
+## GitHub Actions
+
+Runs on every push:
+
+- Prettier check
+- ESLint check
+- Tests
+
+If any fail → build fails
+
+---
+
+## Docker Setup
+
+### Build
+
+docker build -t princepal_coding_assignment13 .
+
+### Run
+
+docker run -p 8018:8018 princepal_coding_assignment13
+
+### Open
+
+http://localhost:8018
+
+---
+
+## Technologies
+
 - React
 - Storybook
+- Husky
+- ESLint
+- Prettier
+- Jest
 - Docker
-
----
-
-##  Components Included
-- Button
-- Label
-- Text
-- Table
-- Dropdown
-- Radio Button
-- Image
-
----
-
-##  How it Works
-Storybook runs on port 8083 and displays all UI components individually for testing and development.
+- GitHub Actions
