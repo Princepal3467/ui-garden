@@ -8,10 +8,7 @@ const StyledSelect = styled.select`
 
 export const Dropdown = ({ options, value, onChange }: DropdownProps) => {
   return (
-    <StyledSelect
-      value={value}
-      onChange={(e) => onChange?.(e.target.value)}
-    >
+    <StyledSelect value={value} onChange={(e) => onChange?.(e.target.value)}>
       {options.map((option) => (
         <option key={option} value={option}>
           {option}

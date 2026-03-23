@@ -12,8 +12,7 @@ type Story = StoryObj<typeof HeroImage>;
 
 export const Default: Story = {
   args: {
-    imageUrl:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    imageUrl: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
     title: "Welcome to Our Website",
   },
 };
